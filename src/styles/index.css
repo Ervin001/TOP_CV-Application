@@ -11,14 +11,42 @@ body {
 
 img {
   width: 100%;
+  height: 100%;
+}
+
+#root {
+  margin: 0 auto;
+  max-width: 120rem;
+}
+
+.under-construction-img-container,
+.img-credits {
+  margin: 0 auto;
 }
 
 .under-construction-img-container {
-  max-width: 120rem;
+  position: relative;
+  max-width: 90rem;
 }
 
 .img-credits {
   text-align: center;
   font-size: 1.2rem;
   font-family: 'Roboto';
+
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media screen and (max-width: 500px) {
+  html,
+  body {
+    font-size: 56.25%;
+  }
+
+  .img-credits {
+    bottom: -10%;
+  }
 }
